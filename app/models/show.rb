@@ -5,6 +5,6 @@ class Show < ActiveRecord::Base
 
   def self.most_popular_show
     rating = Show.where(rating: self.highest_rating)
-    rating.flatten
+    rating.to_a
   end
 end
